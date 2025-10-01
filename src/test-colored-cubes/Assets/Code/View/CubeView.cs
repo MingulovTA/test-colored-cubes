@@ -1,24 +1,27 @@
 using UnityEngine;
 
-public class CubeView : MonoBehaviour
+namespace Assets.Code.View
 {
-    [SerializeField] private MeshRenderer _meshRenderer;
-
-    private int _offsetX;
-    private int _offsetY;
-
-    public int OffsetX => _offsetX;
-    public int OffsetY => _offsetY;
-
-    public void Init(int offfsetX, int offsetY)
+    public class CubeView : MonoBehaviour
     {
-        _offsetX = offfsetX;
-        _offsetY = offsetY;
-        transform.localPosition = new Vector3(_offsetX,0,3-_offsetY);
-    }
+        [SerializeField] private MeshRenderer _meshRenderer;
 
-    public void SetColor(Color color)
-    {
-        _meshRenderer.material.color = color;
+        private int _offsetX;
+        private int _offsetY;
+
+        public int OffsetX => _offsetX;
+        public int OffsetY => _offsetY;
+
+        public void Init(int offfsetX, int offsetY)
+        {
+            _offsetX = offfsetX;
+            _offsetY = offsetY;
+            transform.localPosition = new Vector3(_offsetX,0,3-_offsetY);
+        }
+
+        public void SetColor(Color color)
+        {
+            _meshRenderer.material.color = color;
+        }
     }
 }

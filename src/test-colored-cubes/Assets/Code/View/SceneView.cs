@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Code.Gameplay;
 using UnityEngine;
 
-namespace Code.View
+namespace Assets.Code.View
 {
     public class SceneView : MonoBehaviour
     {
