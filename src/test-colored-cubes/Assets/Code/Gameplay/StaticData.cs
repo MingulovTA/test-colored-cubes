@@ -7,8 +7,8 @@ namespace Code.Gameplay
     {
         public const string FileName = "example.txt";
         
-        public const int CarietWidth = 1;
-        public const int CarietHeight = 1;
+        public const int CarietWidth = 3;
+        public const int CarietHeight = 3;
         
         public static readonly Dictionary<int, Color> Colors = new Dictionary<int, Color>
         {

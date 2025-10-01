@@ -1,4 +1,6 @@
-﻿namespace Code.Gameplay
+﻿using UnityEngine;
+
+namespace Code.Gameplay
 {
     public class Field
     {
@@ -15,6 +17,20 @@
             _width = width;
             _height = height;
             _table = new int[width, height];
+        }
+
+        public Color GetColorOf(int x, int y)
+        {
+            if (x < 0)
+                x += Width;
+            if (x >= Width)
+                x -= Width;
+        
+            if (y < 0)
+                y += Height;
+            if (y >= Height)
+                y -= Height;
+            return StaticData.Colors[_table[x, y]];
         }
     }
 }
